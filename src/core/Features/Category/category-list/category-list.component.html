@@ -1,0 +1,25 @@
+
+<div class="container">
+    <h1 class="mt-3">Categorias</h1>
+    <div class="d-files justify-content-end-mt-3"></div>
+    <a [routerLink]="['admin/categorias/add']" class="btn btn primary">Nova category</a>
+</div>
+<div class="container">
+    <ng-container *ngIf="categories">
+    
+    <table class="table table-bordered mt-03">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categories">
+                <td>{{category.id}}</td>
+                <td>{{category.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </ng-container>
+</div>
